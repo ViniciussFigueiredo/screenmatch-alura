@@ -4,6 +4,8 @@ import br.com.alura.screnmatch.modelos.Episodio;
 import br.com.alura.screnmatch.modelos.Movie;
 import br.com.alura.screnmatch.modelos.Serie;
 
+import java.util.ArrayList;
+
 public class Main{
     static void main(String[] args) {
         Movie myMovie = new Movie();
@@ -47,6 +49,36 @@ public class Main{
         episodio.setSerie("Lost");
         episodio.setTotalVisualizacoes(300);
         filtro.filra(episodio);
+
+
+        Movie filmeDois = new Movie();
+        filmeDois.setNome("Michael");
+        filmeDois.setDuracaoEmMinutos(180);
+        filmeDois.setAnoDeLancamento(2026);
+        filmeDois.feedback(10);
+
+        Serie serieDois = new Serie();
+        serieDois.setNome("Teen Wolf");
+        serieDois.setAnoDeLancamento(2011);
+
+        var series = new ArrayList<>();
+        series.add(myserie);
+        series.add(serieDois);
+
+        System.out.println(series);
+        System.out.println(series.get(0).toString());
+        System.out.println(series.get(1).toString());
+
+        ArrayList<Movie> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(myMovie);
+        listaDeFilmes.add(filmeDois);
+        listaDeFilmes.add(outroFilme);
+
+        System.out.println("Primeiro filme" + listaDeFilmes.get(0).getNome());
+        System.out.println("Tamanho da lista " + listaDeFilmes.size());
+        System.out.println(listaDeFilmes);
+        System.out.println(listaDeFilmes.get(1).toString());
+
     }
 }
 
