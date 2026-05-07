@@ -8,9 +8,7 @@ import java.util.ArrayList;
 
 public class Main{
     static void main(String[] args) {
-        Movie myMovie = new Movie();
-        myMovie.setNome("O poderoso chefão");
-        myMovie.setAnoDeLancamento(1970);
+        Movie myMovie = new Movie("O poderoso chefão", 1970);
         myMovie.setDuracaoEmMinutos(180);
 
         myMovie.showTechnicalRecord();
@@ -20,9 +18,7 @@ public class Main{
         System.out.println("Total de Avaliações: " + myMovie.getTotalDeAvaliacaol());
         System.out.println(myMovie.pegaMedia());
 
-        Serie myserie = new Serie();
-        myserie.setNome("Invencible");
-        myserie.setAnoDeLancamento(2020);
+        Serie myserie = new Serie("Invencible", 2020);
         myserie.showTechnicalRecord();
         myserie.setTemporadas(4);
         myserie.setEpisodiosPorTemporadas(8);
@@ -30,9 +26,7 @@ public class Main{
         System.out.println("Duração para maratonar: " + myserie.getDuracaoEmMinutos());
         myserie.setAtiva(true);
 
-        Movie outroFilme = new Movie();
-        outroFilme.setNome("Avatar");
-        outroFilme.setAnoDeLancamento(2023);
+        Movie outroFilme = new Movie("Avatar", 2023);
         outroFilme.setDuracaoEmMinutos(200);
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
@@ -51,15 +45,11 @@ public class Main{
         filtro.filra(episodio);
 
 
-        Movie filmeDois = new Movie();
-        filmeDois.setNome("Michael");
+        Movie filmeDois = new Movie("Michael", 2026);
         filmeDois.setDuracaoEmMinutos(180);
-        filmeDois.setAnoDeLancamento(2026);
         filmeDois.feedback(10);
 
-        Serie serieDois = new Serie();
-        serieDois.setNome("Teen Wolf");
-        serieDois.setAnoDeLancamento(2011);
+        Serie serieDois = new Serie("Teen Wolf", 2011);
 
         var series = new ArrayList<>();
         series.add(myserie);
@@ -68,6 +58,8 @@ public class Main{
         System.out.println(series);
         System.out.println(series.get(0).toString());
         System.out.println(series.get(1).toString());
+
+        var filmeTres = new Movie("Ilha do medo", 2010);
 
         ArrayList<Movie> listaDeFilmes = new ArrayList<>();
         listaDeFilmes.add(myMovie);
